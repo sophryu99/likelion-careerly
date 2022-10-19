@@ -1,7 +1,7 @@
 # likelion-careerly
-Likelion assignment repository
+[Project description & objective](https://docs.google.com/document/d/17uLVpUv5QZdz7CsELBMOAGSeQPeW08m51bSFtJqpo44/edit) 
 
-**Git workflow**
+## Git workflow
 
 To pull the code from the repository,
 ```
@@ -15,8 +15,13 @@ git commit -m "COMMIT_MESSAGE"
 git push origin main
 ```
 
+Tracking local commits
+```
+git status
+```
 
 
+## Starting the server
 Run the following command to start up the server:
 
 ```python3
@@ -28,4 +33,12 @@ OR
 python3 manage.py runserver
 ```
 
-Hello
+URL for the landing page
+```
+http://127.0.0.1:8000/homepage/
+```
+
+URL for the main page
+```
+http://127.0.0.1:8000/main/
+```
