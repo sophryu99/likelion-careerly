@@ -27,5 +27,3 @@ OR
 ```python3
 python3 manage.py runserver
 ```
-
-Hello
