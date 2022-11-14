@@ -7,17 +7,36 @@ import axios from "axios";
 import { API_URL } from "../constants";
 
 class Home extends Component {
-  state = {
-    jobs: []
-  };
+  // state = {
+  //   jobs: []
+  // };
+  
+  constructor (props) {
+    super(props)
+    this.state = {
+      jobs: []
+    };
+    this.resetState()
+  }
+
 
   componentDidMount() {
     this.resetState();
   }
 
   getjobs = () => {
-    axios.get(API_URL).then(res => this.setState({ jobs: res.data }));
+    axios.get(API_URL).then(res => {
+      
+      this.setState(
+        { jobs: res.data })
+        // console.log(res.data, "result")
+      
+      }
+        
+      );
+      
   };
+  
 
   resetState = () => {
     this.getjobs();
@@ -28,8 +47,20 @@ class Home extends Component {
       <Container style={{ marginTop: "20px" }}>
         <Row>
           <Col>
+            
             <JobList
-              jobs={this.state.jobs}
+              jobs = {this.state.jobs.map((item, i) => (
+                <div key = {i}>
+                  <div>{item.id}</div>
+                  <div>{item.jobtitle}</div>
+                  <div>{item.company}</div>
+
+
+                </div>
+
+                ))
+                
+              }
               resetState={this.resetState}
             />
           </Col>
