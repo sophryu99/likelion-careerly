@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from django.urls import include
+from careerly import views
 
 urlpatterns = [
-    path('homepage/', include('homepage.urls')),
+    path('careerly/', include('careerly.urls')),
+    re_path(r'^api/careerly/$', views.job_list),
     path('admin/', admin.site.urls),
 ]
