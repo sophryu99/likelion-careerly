@@ -35,10 +35,16 @@ python3 manage.py runserver
 
 URL for the landing page
 ```
-http://127.0.0.1:8000/homepage/
+http://127.0.0.1:8000/careerly/
 ```
 
-URL for the main page
+URL for the admin page
 ```
-http://127.0.0.1:8000/main/
+http://127.0.0.1:8000/admin/
+```
+
+Login credentials for the admin account
+```
+username: sophryu99
+pw: careerlyadmin
 ```
