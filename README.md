@@ -20,25 +20,31 @@ Tracking local commits
 git status
 ```
 
+## Dependencies to install
+```
+pip install django djangorestframework django-cors-headers
+python3 -m pip install install Pillow
+```
 
 ## Starting the server
-Run the following command to start up the server:
-
-```python3
-python manage.py runserver
-```
-OR
+To start up the back-end server:
 
 ```python3
 python3 manage.py runserver
 ```
 
-URL for the landing page
+To view the front-end:
 ```
-http://127.0.0.1:8000/homepage/
+npm start
 ```
 
-URL for the main page
+URL for the admin page
 ```
-http://127.0.0.1:8000/main/
+http://127.0.0.1:8000/admin/
+```
+
+Login credentials for the admin account
+```
+username: careerly
+pw: careerly
 ```

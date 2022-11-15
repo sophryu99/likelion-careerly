@@ -4,4 +4,4 @@ from .models import JobPosting
 class CareerlySerializer(serializers.ModelSerializer):
     class Meta:
         model = JobPosting
-        fields = ('id', 'jobtitle', 'company')
+        fields = ('id', 'jobtitle', 'company', 'location', 'jobType', 'datePosted', 'posting', 'logoimg')

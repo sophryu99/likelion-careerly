@@ -5,8 +5,12 @@ from django.db import models
 # Data Model for Job Postings
 class JobPosting(models.Model):
     jobtitle = models.CharField(max_length=120)
-    company = models.TextField()
-    # completed = models.BooleanField(default=False)
+    company = models.CharField(max_length=120)
+    location = models.CharField(max_length=120)
+    jobType = models.CharField(max_length=120)
+    datePosted = models.DateField()
+    posting = models.TextField()
+    logoimg = models.ImageField(default = False)
 
     def _str_(self):
         return self.jobtitle
