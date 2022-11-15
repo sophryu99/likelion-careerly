@@ -29,7 +29,6 @@ class Home extends Component {
       
       this.setState(
         { jobs: res.data })
-        // console.log(res.data, "result")
       
       }
         
@@ -54,12 +53,14 @@ class Home extends Component {
                   <div>{item.id}</div>
                   <div>{item.jobtitle}</div>
                   <div>{item.company}</div>
-
-
+                  <div>{item.location}</div>
+                  <div>{item.jobType}</div>
+                  <div>{item.datePosted}</div>
+                  <div>{item.posting}</div>
+                  <div>{item.logoimg}</div>
                 </div>
 
                 ))
-                
               }
               resetState={this.resetState}
             />
